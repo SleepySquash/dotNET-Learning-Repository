@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/mayday/.dotnet/store/|arch|/|tfm|",
+      "/Users/mayday/.nuget/packages"
+    ]
+  }
+}
