@@ -30,9 +30,9 @@
 ![Screenshot 2](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
 
 Можно удалить, а также добавить или отредактировать пользователя:
-![Screenshot 3](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
+![Screenshot 3](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.38.jpg)
 
 По нажатию кнопки ">>>" отображается отчёт состояния выбранного пользователя:
-![Screenshot 4](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
+![Screenshot 4](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.11.35.jpg)
 
 Аналогично пользователям, состояния тоже можно добавлять, удалять и редактировать.
