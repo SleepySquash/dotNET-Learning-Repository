@@ -1,0 +1,80 @@
+@model WebApplication.Models.User
+
+<br />
+<h2 class="text-info">
+    @(Model.Id != 0 ? "Edit" : "Create new") user
+</h2>
+<br />
+
+<div class="container border p-3">
+    <form method="post">
+        @if (Model.Id != 0) {<input type="hidden" asp-for="Id" />}
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="Phone"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="FirstName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="MiddleName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="MiddleName" class="form-control" />
+                <span asp-validation-for="MiddleName" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="LastName"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="Password"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class="col-3 offset-3">
+                <button type="submit" class="btn btn-primary form-control">
+                    @(Model.Id == 0 ? "Create" : "Update")
+                </button>
+            </div>
+            <div class="col-3">
+                <a asp-action="Index" class="btn btn-success form-control">Back to list</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

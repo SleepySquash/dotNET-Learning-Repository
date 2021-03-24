@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3YX4d2Hg4RXwiUSvJ+fWFbQimMAR4b9MiG4D339+CLuc3p2okAQV7Pr2nsQ5IumJ+G/6ZMgEseDlxvKIYzS6Rg==",
+  "success": true,
+  "projectFilePath": "/Users/mayday/Developer/RiderProjects/ConsoleApp1/WebApplication/WebApplication.csproj",
+  "expectedPackageFiles": [
+    "/Users/mayday/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

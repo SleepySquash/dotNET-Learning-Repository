@@ -1,0 +1,47 @@
+@model WebApplication.Models.UsersViewModel
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        <h2>Users</h2>
+    </div>
+    <div class="col-6">
+        <div class="row justify-content-end">
+            <a asp-action="Edit" class="btn btn-success text-white" style="cursor: pointer;">Add new User</a>
+        </div>
+    </div>
+</div>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameForInnerType((User u) => u.Id)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.Phone)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.FirstName)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.MiddleName)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.LastName)</th>
+        <th>@Html.DisplayNameForInnerType((User u) => u.Password)</th>
+        <th></th>
+    </tr>
+    
+    @foreach (var user in Model.Users)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => user.Id)</td>
+            <td>@Html.DisplayFor(m => user.Phone)</td>
+            <td>@Html.DisplayFor(m => user.FirstName)</td>
+            <td>@Html.DisplayFor(m => user.MiddleName)</td>
+            <td>@Html.DisplayFor(m => user.LastName)</td>
+            <td>@Html.DisplayFor(m => user.Password)</td>
+            <td>
+                <a href="/conditions?userId=@user.Id" class="btn btn-primary btn-sm text-white" style="cursor: pointer;">>>></a>
+                <a href="/users/edit?id=@user.Id" class="btn btn-secondary btn-sm text-white" style="cursor: pointer;">Edit</a>
+                <a href="/users/delete?id=@user.Id" class="btn btn-danger btn-sm text-white" style="cursor: pointer;"
+                   onclick="return confirm('Are you sure you want to delete?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+</table>

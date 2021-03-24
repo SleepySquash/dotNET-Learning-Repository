@@ -1,0 +1,47 @@
+@model WebApplication.Models.ConditionsViewModel
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        @if (Model.User != null)
+        {
+            <h2>Отчёт состояния<br /> @Model.User.LastName @Model.User.FirstName @Model.User.MiddleName</h2>
+        }
+        else
+        {
+            <h2 class="text-danger">Возникла ошибка при обработке запроса</h2>
+        }
+    </div>
+    <div class="col-6">
+        <div class="row justify-content-end">
+            <a asp-action="Edit" asp-route-userId="@Model.User.Id" class="btn btn-success text-white" style="cursor: pointer;">Добавить отчёт состояния</a>
+        </div>
+    </div>
+</div>
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>@Html.DisplayNameForInnerType((Condition u) => u.Id)</th>
+        <th>@Html.DisplayNameForInnerType((Condition u) => u.Date)</th>
+        <th>@Html.DisplayNameForInnerType((Condition u) => u.State)</th>
+        <th></th>
+    </tr>
+    
+    @foreach (var condition in Model.Conditions)
+    {
+        <tr>
+            <td>@Html.DisplayFor(m => condition.Id)</td>
+            <td>@Html.DisplayFor(m => condition.Date)</td>
+            <td>@Html.DisplayFor(m => condition.State)</td>
+            <td>
+                <a href="/conditions/edit?id=@condition.Id" class="btn btn-primary btn-sm text-white" style="cursor: pointer;">Edit</a>
+                <a href="/conditions/delete?id=@condition.Id&userId=@condition.UserId" class="btn btn-danger btn-sm text-white" style="cursor: pointer;"
+                   onclick="return confirm('Are you sure you want to delete?')">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+</table>

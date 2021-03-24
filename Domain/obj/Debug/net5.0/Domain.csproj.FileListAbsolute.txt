@@ -1,0 +1,12 @@
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/bin/Debug/net5.0/Domain.deps.json
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/bin/Debug/net5.0/Domain.dll
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/bin/Debug/net5.0/ref/Domain.dll
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/bin/Debug/net5.0/Domain.pdb
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.csprojAssemblyReference.cache
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.AssemblyInfo.cs
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.csproj.CoreCompileInputs.cache
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.dll
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/ref/Domain.dll
+/Users/mayday/Developer/RiderProjects/ConsoleApp1/Domain/obj/Debug/net5.0/Domain.pdb
