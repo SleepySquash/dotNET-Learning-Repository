@@ -24,15 +24,15 @@
 ## Использование
 
 Сначала запустить WebAPI (бэкэнд), там подключён Swagger, который и откроется при запуске:
-![Screenshot 1](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/main/Screenshot%202021-03-24%20at%2020.08.37.jpg)
+![Screenshot 1](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.08.37.jpg)
 
 Затем запустить WebApplication (фротнэнд). На странице Users отображается список пользователей:
-![Screenshot 2](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/main/Screenshot%202021-03-24%20at%2020.10.11.jpg)
+![Screenshot 2](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
 
 Можно удалить, а также добавить или отредактировать пользователя:
-![Screenshot 3](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/main/Screenshot%202021-03-24%20at%2020.10.11.jpg)
+![Screenshot 3](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
 
 По нажатию кнопки ">>>" отображается отчёт состояния выбранного пользователя:
-![Screenshot 4](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/main/Screenshot%202021-03-24%20at%2020.10.11.jpg)
+![Screenshot 4](https://github.com/SleepySquash/dotNET-Learning-Repository/blob/master/Screenshot%202021-03-24%20at%2020.10.11.jpg)
 
 Аналогично пользователям, состояния тоже можно добавлять, удалять и редактировать.
