@@ -19,7 +19,7 @@ namespace BLL.Services
         public async Task CreateAsync(User user)
         {
             var userDb = await _usersRepository.FindAsync(u => u.Phone == user.Phone);
-            if (userDb.Any()) throw new Exception("Phone must be unique");
+            if (userDb.Any()) throw new InvalidOperationException("Phone must be unique");
             await _usersRepository.AddAsync(user);
         }
 

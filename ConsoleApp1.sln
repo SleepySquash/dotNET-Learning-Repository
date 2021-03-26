@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A9E38AF7-BDF7-46EA-9AEB-23083154EF79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Tests", "BLL.Tests\BLL.Tests.csproj", "{690EE7B6-D31F-4BAF-B37C-30010092D791}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{A9E38AF7-BDF7-46EA-9AEB-23083154EF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E38AF7-BDF7-46EA-9AEB-23083154EF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E38AF7-BDF7-46EA-9AEB-23083154EF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
