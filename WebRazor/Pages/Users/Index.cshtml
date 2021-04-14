@@ -1,0 +1,55 @@
+@page
+@using System.Linq
+@model WebRazor.Pages.Users.Index
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        <h2>Users</h2>
+    </div>
+    <div class="col-6">
+        <div class="row justify-content-end">
+            <a asp-page="Edit" class="btn btn-success text-white" style="cursor: pointer;">Add new User</a>
+        </div>
+    </div>
+</div>
+<br />
+
+<form method="post">
+    @if (Model.Users.List.Any())
+    {
+        <table class="table table-bordered">
+            <tr>
+                <th><label asp-for="Users.List.FirstOrDefault().Id"></label></th>
+                <th><label asp-for="Users.List.FirstOrDefault().Phone"></label></th>
+                <th><label asp-for="Users.List.FirstOrDefault().FirstName"></label></th>
+                <th><label asp-for="Users.List.FirstOrDefault().MiddleName"></label></th>
+                <th><label asp-for="Users.List.FirstOrDefault().LastName"></label></th>
+                <th><label asp-for="Users.List.FirstOrDefault().Password"></label></th>
+                <th></th>
+            </tr>
+
+            @foreach (var user in Model.Users.List)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => user.Id)</td>
+                    <td>@Html.DisplayFor(m => user.Phone)</td>
+                    <td>@Html.DisplayFor(m => user.FirstName)</td>
+                    <td>@Html.DisplayFor(m => user.MiddleName)</td>
+                    <td>@Html.DisplayFor(m => user.LastName)</td>
+                    <td>@Html.DisplayFor(m => user.Password)</td>
+                    <td>
+                        <a asp-page="../Conditions/Index" asp-route-userId="@user.Id" class="btn btn-primary btn-sm text-white" style="cursor: pointer;">>>></a>
+                        <a asp-page="Edit" asp-route-id="@user.Id" class="btn btn-secondary btn-sm text-white" style="cursor: pointer;">Edit</a>
+                        <button asp-page-handler="Delete" asp-route-id="@user.Id" class="btn btn-danger btn-sm text-white" onclick="return confirm('Are you sure you want to delete?')">Delete</button>
+                    </td>
+                </tr>
+            }
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+        </table>
+    }
+    else
+    {
+        <p>No users available</p>
+    }
+</form>

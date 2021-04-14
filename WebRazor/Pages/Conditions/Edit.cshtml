@@ -1,0 +1,52 @@
+@page
+@model WebRazor.Pages.Conditions.Edit
+
+<br />
+<h2 class="text-info">
+    @(Model.Condition.Id != 0 ? "Edit" : "Create new") condition
+</h2>
+<br />
+
+<div class="container border p-3">
+    <form method="post">
+        @if (Model.Condition.Id != 0) {<input type="hidden" asp-for="Condition.Id" />}
+        <input type="hidden" asp-for="Condition.UserId" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="Condition.Date"></label>
+            </div>
+            <div class="col-6">
+                <input id="DatePicker" asp-for="Condition.Date" class="form-control" />
+                <span asp-validation-for="Condition.Date" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-3">
+                <label asp-for="Condition.State"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="Condition.State" class="form-control" />
+                <span asp-validation-for="Condition.State" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-3 offset-3">
+                <button type="submit" class="btn btn-primary form-control">
+                    @(Model.Condition.Id == 0 ? "Create" : "Update")
+                </button>
+            </div>
+            <div class="col-3">
+                <a asp-page="Index" asp-route-userId="@Model.Condition.UserId" class="btn btn-success form-control">Back to list</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

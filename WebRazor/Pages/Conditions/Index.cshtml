@@ -1,0 +1,57 @@
+@page
+@model WebRazor.Pages.Conditions.Index
+
+<br />
+<div class="container row">
+    <div class="col-6">
+        @if (Model.User != null)
+        {
+            <h2>Отчёт состояния<br /> @Model.Conditions.User.LastName @Model.Conditions.User.FirstName @Model.Conditions.User.MiddleName</h2>
+        }
+        else
+        {
+            <h2 class="text-danger">Возникла ошибка при обработке запроса</h2>
+        }
+    </div>
+    <div class="col-6">
+        <div class="row justify-content-end">
+            <a asp-page="Edit" asp-route-userId="@Model.Conditions.User.Id" class="btn btn-success text-white" style="cursor: pointer;">Добавить отчёт состояния</a>
+        </div>
+    </div>
+</div>
+<br />
+
+<form method="post">
+    @if (Model.Conditions.List.Any())
+    {
+        <table class="table table-bordered">
+            <tr>
+                <th><label asp-for="Conditions.List.FirstOrDefault().Id"></label></th>
+                <th><label asp-for="Conditions.List.FirstOrDefault().Date"></label></th>
+                <th><label asp-for="Conditions.List.FirstOrDefault().State"></label></th>
+                <th></th>
+            </tr>
+    
+            @foreach (var condition in Model.Conditions.List)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => condition.Id)</td>
+                    <td>@Html.DisplayFor(m => condition.Date)</td>
+                    <td>@Html.DisplayFor(m => condition.State)</td>
+                    <td>
+                        <a asp-page="Edit" asp-route-id="@condition.Id" class="btn btn-primary btn-sm text-white" style="cursor: pointer;">Edit</a>
+                        <button asp-page-handler="Delete" asp-route-id="@condition.Id" asp-route-userId="@condition.UserId" class="btn btn-danger btn-sm text-white"
+                           onclick="return confirm('Are you sure you want to delete?')">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            }
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        </table>
+    }
+    else
+    {
+        <p>No users available</p>
+    }
+</form>

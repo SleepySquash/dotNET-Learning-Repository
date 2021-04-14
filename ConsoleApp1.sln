@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Tests", "BLL.Tests\BLL.Tests.csproj", "{690EE7B6-D31F-4BAF-B37C-30010092D791}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebRazor", "WebRazor\WebRazor.csproj", "{4B28D569-C76B-45F4-AF35-477F90199DD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,10 @@ Global
 		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{690EE7B6-D31F-4BAF-B37C-30010092D791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B28D569-C76B-45F4-AF35-477F90199DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B28D569-C76B-45F4-AF35-477F90199DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B28D569-C76B-45F4-AF35-477F90199DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B28D569-C76B-45F4-AF35-477F90199DD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
